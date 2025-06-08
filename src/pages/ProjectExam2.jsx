@@ -1,16 +1,18 @@
 // JsFrameworks.jsx
 import "./Project.css";
 import React from "react";
+import ExamThumb from "../assets/ExamThumb.png";
 
 function ProjectExam2() {
   return (
     <div className="project-page">
       <h1 className="project-title">Project Exam 2</h1>
-      <img src="/thumb-js.jpg" alt="JS Frameworks" className="project-img" />
+      <img src={ExamThumb} alt="JS Frameworks" className="project-img" />
       <p className="project-description">
-        This project dives into popular JavaScript frameworks like React, Vue,
-        and Svelte. It includes feature comparisons, performance tests, and
-        hands-on component implementations.
+        In my final exam project i was tasked with creating a AirBnb knock-off
+        website, with options for booking, profiles, listing venues. The project
+        utilazed the Noroff Api, which provided a comprehensive set of endpoints
+        for managing listings and bookings.
       </p>
 
       <section className="project-section">
