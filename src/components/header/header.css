@@ -1,0 +1,25 @@
+/* src/components/header/header.css */
+
+.site-header {
+  background: hsl(0, 0%, 98%);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.site-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.site-title-link {
+  text-decoration: none;
+  color: hsl(0, 0%, 10%);
+  transition: color 0.2s ease;
+}
+
+.site-title-link:hover {
+  color: hsl(220, 60%, 50%);
+}

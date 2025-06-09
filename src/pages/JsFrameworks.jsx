@@ -1,17 +1,15 @@
+import React from 'react';
 import "./Project.css";
-import React from "react";
 import JsThumb from "../assets/JsThumb.png";
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaReact,
-  FaNodeJs,
-  FaFigma,
-} from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
-import { VscGithubInverted } from "react-icons/vsc";
+import JsCart from "../assets/JsCart.png";
+import JsHook from "../assets/JsHook.png";
+import JsNav from "../assets/JsNav.png";
+import JsResponsiveNav from "../assets/JsResponsiveNav.png";
+import JsRouter from "../assets/JsRouter.png";
+
+import { FaReact, FaJsSquare } from "react-icons/fa";
 import { SiVite } from "react-icons/si";
+
 
 function JsFrameworks() {
   return (
@@ -19,32 +17,28 @@ function JsFrameworks() {
       <div className="project-hero">
         <img
           src={JsThumb}
-          alt="Project thumbnail"
+          alt="JS Frameworks assignment thumbnail"
           className="project-hero-img"
         />
-        <h1 className="project-hero-title">Holidaze - Project Exam 2</h1>
+        <h1 className="project-hero-title">JS Frameworks Assignment</h1>
       </div>
+
       <p className="project-description">
-        For my final exam, I built an AirBnb-inspired booking platform using
-        Noroff's public API. The application includes core functionality like
-        user authentication, venue listings, booking, profile management, and
-        venue administration. All features are integrated into a clean,
-        responsive UI built with React, Vite, and Tailwind.
+        In this assignment, I built a multi-page online store using React,
+        Vite, React Router, a custom data-fetching hook, and Zustand for state
+        management. Core features include product listing, search filtering,
+        shopping cart, and checkout flow, all with client-side routing and
+        global state.
       </p>
 
       <section className="project-section">
         <h2>Technologies Used</h2>
         <ul className="tech-icon-list">
-          <li>
-            <FaReact title="React" size={38} color="#61dafb" />
-          </li>
-          <li>
-            <SiVite title="Vite" size={38} color="#646cff" />
-          </li>
-          <li>
-            <SiTailwindcss title="Tailwind CSS" size={38} color="#38bdf8" />
-          </li>
-          <li className="tech-text">Noroff API</li>
+          <li><FaReact title="React" size={38} color="#61dafb" /></li>
+          <li><SiVite title="Vite" size={38} color="#646cff" /></li>
+          <li><FaJsSquare title="JavaScript" size={38} color="#f7df1e" /></li>
+          <li className="tech-text">React Router</li>
+          <li className="tech-text">Zustand</li>
         </ul>
       </section>
 
@@ -52,49 +46,56 @@ function JsFrameworks() {
         <h2>What I Learned</h2>
 
         <div className="project-flex">
-          <img src="" alt="Modal example" className="project-inline-img" />
+          <img
+            src={JsRouter}
+            alt="React Router setup snippet"
+            className="project-inline-img"
+          />
           <p>
-            One of the biggest takeaways was learning to manage scope. I
-            initially overengineered the design and functionality, which cost
-            time and momentum. Restarting with a simpler, more focused plan
-            allowed me to structure my code better and build more reusable
-            components.
-          </p>
-          <p>
-            I also deepened my understanding of{" "}
-            <strong>React state management</strong> using <code>useState</code>.
-            I used it to control a range of UI states including form data,
-            modals, loading indicators, and error messages. Some specific use
-            cases:
-          </p>
-          <ul>
-            <li>
-              Storing and updating user input across controlled form components.
-            </li>
-            <li>
-              Managing modal open/close states with booleans for cleaner UX.
-            </li>
-            <li>
-              Tracking asynchronous states like loading, success, and error when
-              registering or editing data.
-            </li>
-          </ul>
-          <p>
-            These patterns helped me build reactive, user-friendly interfaces
-            that stay predictable and easy to debug. I also learned to isolate
-            state logic where needed to avoid unnecessary re-renders and keep
-            components clean.
+            Implementing React Router allowed me to structure the app into
+            separate pages and nested layouts. I learned to use <code>Routes</code>,
+            dynamic <code>Route</code> parameters for product details, and
+            <code>Outlet</code> for shared layouts.
           </p>
         </div>
 
         <div className="project-flex">
-          <img src="" alt="Profile UI example" className="project-inline-img" />
+          <img
+            src={JsHook}
+            alt="useAPI custom hook"
+            className="project-inline-img"
+          />
           <p>
-            Beyond technical skills, this project helped reinforce a core
-            principle:
-            <strong> keep it simple.</strong> Simplicity improves both the
-            development process and the user experience. This mindset helped me
-            clean up design inconsistencies and better manage component logic.
+            Building a <code>useAPI</code> custom hook deepened my understanding
+            of <strong>hooks</strong>, async data fetching, and managing <code>loading</code>
+            and <code>error</code> states centrally.
+          </p>
+        </div>
+
+        <div className="project-flex">
+          <img
+            src={JsCart}
+            alt="FetchStore component example"
+            className="project-inline-img"
+          />
+          <p>
+            The <code>FetchStore</code> component taught me how to combine
+            filtering logic with React state and Zustand for global product and
+            cart management. I also practiced debouncing and efficient list
+            rendering.
+          </p>
+        </div>
+
+        <div className="project-flex">
+          <img
+            src={JsResponsiveNav}
+            alt="Responsive navigation snippet"
+            className="project-inline-img"
+          />
+          <p>
+            I created a responsive navigation with a hamburger menu using local
+            React state and the <code>lucide-react</code> icon library,
+            ensuring accessibility and mobile-friendly design.
           </p>
         </div>
       </section>
@@ -102,10 +103,11 @@ function JsFrameworks() {
       <section className="project-section">
         <h2>Challenges Faced</h2>
         <p>
-          The design process was the hardest part. I started with too much
-          complexity, and it quickly became hard to manage. Once I stripped it
-          down and focused on clarity and core features, everything aligned much
-          better. From layout flow to data handling, simplifying helped a lot.
+          Managing global state with Zustand and syncing it with component-level
+          filtering took some iteration. I also debugged an issue with the
+          <code>catch</code> block in <code>useAPI</code> that wasn’t correctly
+          handling errors due to arrow function syntax. Ensuring responsive
+          design across breakpoints was another focus.
         </p>
       </section>
 
@@ -118,8 +120,8 @@ function JsFrameworks() {
             rel="noopener noreferrer"
           >
             Live Demo
-          </a>{" "}
-          |{" "}
+          </a>{" "}|
+          {" "}
           <a
             href="https://github.com/yourrepo"
             target="_blank"
@@ -129,6 +131,7 @@ function JsFrameworks() {
           </a>
         </p>
       </section>
+
     </div>
   );
 }
