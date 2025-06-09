@@ -1,8 +1,7 @@
-// Home.jsx
 import { Link } from "react-router";
 import React from "react";
 import "./home.css";
-import ProfilePicture2 from "../assets/ProfilePicture2.jpg";
+import ProfilePicture from "../assets/ProfilePicture.jpg";
 import ExamThumb from "../assets/ExamThumb.png";
 import JsThumb from "../assets/JsThumb.png";
 import SemesterThumb from "../assets/SemesterThumb.png";
@@ -14,9 +13,8 @@ import {
   FaNodeJs,
   FaFigma,
 } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { SiTailwindcss, SiVite } from "react-icons/si";
 import { VscGithubInverted } from "react-icons/vsc";
-import { SiVite } from "react-icons/si";
 
 const projects = [
   {
@@ -30,7 +28,7 @@ const projects = [
     title: "Project Exam 2",
     thumbnail: ExamThumb,
     description:
-      "Final exam project showcasing Api usage, React Routing and overall web-dev technologies.",
+      "Final exam project showcasing API usage, React Routing and modern development tools.",
   },
   {
     path: "/SemesterProject2",
@@ -44,9 +42,8 @@ const projects = [
 function Home() {
   return (
     <div className="home">
-      {/* About Me Section */}
       <section className="about">
-        <img src={ProfilePicture2} alt="Erland" className="about-img" />
+        <img src={ProfilePicture} alt="Erland" className="about-img" />
         <div className="about-text">
           <h1>Hi, I'm Erland</h1>
           <p>
@@ -55,43 +52,61 @@ function Home() {
             music, working out, and exploring nature. This portfolio showcases
             some of my recent school projects.
           </p>
-          <div>
-            <h3>My Stack</h3>
-            <ul className="stack-list">
-              <li>
-                <FaHtml5 title="HTML5" color="#e34c26" size={40} />
-              </li>
-              <li>
-                <FaCss3Alt title="CSS3" color="#264de4" size={40} />
-              </li>
-              <li>
-                <FaJsSquare title="JavaScript" color="#f7df1e" size={40} />
-              </li>
-              <li>
-                <FaReact title="React" color="#61dafb" size={40} />
-              </li>
-              <li>
-                <SiVite title="Vite" color="#646cff" size={40} />
-              </li>
-              <li>
-                <FaNodeJs title="Node.js" color="#68a063" size={40} />
-              </li>
-              <li>
-                <VscGithubInverted title="GitHub" color="#181717" size={40} />
-              </li>
-              <li>
-                <SiTailwindcss title="Tailwind CSS" color="#38bdf8" size={40} />
-              </li>
-              <li>
-                <FaFigma title="Figma" color="#f24e1e" size={40} />
-              </li>
-            </ul>
-          </div>
         </div>
       </section>
 
-      {/* Project Cards */}
-      <h2 className="home-title">My Projects</h2>
+      <div className="stack-wrapper">
+        <ul className="stack-list">
+          <li>
+            <span className="tooltip" data-tooltip="HTML5">
+              <FaHtml5 />
+            </span>
+          </li>
+          <li>
+            <span className="tooltip" data-tooltip="CSS3">
+              <FaCss3Alt />
+            </span>
+          </li>
+          <li>
+            <span className="tooltip" data-tooltip="JavaScript">
+              <FaJsSquare />
+            </span>
+          </li>
+          <li>
+            <span className="tooltip" data-tooltip="React">
+              <FaReact />
+            </span>
+          </li>
+          <li>
+            <span className="tooltip" data-tooltip="Vite">
+              <SiVite />
+            </span>
+          </li>
+          <li>
+            <span className="tooltip" data-tooltip="Node.js">
+              <FaNodeJs />
+            </span>
+          </li>
+          <li>
+            <span className="tooltip" data-tooltip="GitHub">
+              <VscGithubInverted />
+            </span>
+          </li>
+          <li>
+            <span className="tooltip" data-tooltip="Tailwind CSS">
+              <SiTailwindcss />
+            </span>
+          </li>
+          <li>
+            <span className="tooltip" data-tooltip="Figma">
+              <FaFigma />
+            </span>
+          </li>
+        </ul>
+        <div className="stack-divider" />
+      </div>
+
+      <h2 className="home-title">Latest Projects</h2>
       <div className="card-grid">
         {projects.map((project) => (
           <Link to={project.path} key={project.path} className="card">

@@ -3,143 +3,135 @@ import React from "react";
 import ExamThumb from "../assets/ExamThumb.png";
 import ExamModal from "../assets/ExamModal.png";
 import ExamProfile from "../assets/ExamProfile.png";
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaReact,
-  FaNodeJs,
-  FaFigma,
-} from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { FaReact, FaJsSquare, FaFigma } from "react-icons/fa";
+import { SiVite, SiTailwindcss } from "react-icons/si";
 import { VscGithubInverted } from "react-icons/vsc";
-import { SiVite } from "react-icons/si";
 
 function ProjectExam2() {
   return (
-    <div className="project-page">
+    <main className="project-page">
+      {/* Hero image */}
       <div className="project-hero">
         <img
           src={ExamThumb}
           alt="Project thumbnail"
           className="project-hero-img"
         />
-        <h1 className="project-hero-title">Holidaze - Project Exam 2</h1>
       </div>
-      <p className="project-description">
-        For my final exam, I built an AirBnb-inspired booking platform using
-        Noroff's public API. The application includes core functionality like
-        user authentication, venue listings, booking, profile management, and
-        venue administration. All features are integrated into a clean,
-        responsive UI built with React, Vite, and Tailwind.
-      </p>
 
-      <section className="project-section">
-        <h2>Technologies Used</h2>
-        <ul className="tech-icon-list">
-          <li>
-            <FaReact title="React" size={38} color="#61dafb" />
-          </li>
-          <li>
-            <SiVite title="Vite" size={38} color="#646cff" />
-          </li>
-          <li>
-            <SiTailwindcss title="Tailwind CSS" size={38} color="#38bdf8" />
-          </li>
-          <li className="tech-text">Noroff API</li>
-        </ul>
-      </section>
+      {/* Title, links, description */}
+      <div className="project-intro">
+        <h1 className="project-title">Holidaze – Project Exam 2</h1>
 
-      <section className="project-section">
-        <h2>What I Learned</h2>
-
-        <div className="project-flex">
-          <img
-            src={ExamModal}
-            alt="Modal example"
-            className="project-inline-img"
-          />
-          <p>
-            One of the biggest takeaways was learning to manage scope. I
-            initially overengineered the design and functionality, which cost
-            time and momentum. Restarting with a simpler, more focused plan
-            allowed me to structure my code better and build more reusable
-            components.
-          </p>
-          <p>
-            I also deepened my understanding of{" "}
-            <strong>React state management</strong> using <code>useState</code>.
-            I used it to control a range of UI states including form data,
-            modals, loading indicators, and error messages. Some specific use
-            cases:
-          </p>
-          <ul>
-            <li>
-              Storing and updating user input across controlled form components.
-            </li>
-            <li>
-              Managing modal open/close states with booleans for cleaner UX.
-            </li>
-            <li>
-              Tracking asynchronous states like loading, success, and error when
-              registering or editing data.
-            </li>
-          </ul>
-          <p>
-            These patterns helped me build reactive, user-friendly interfaces
-            that stay predictable and easy to debug. I also learned to isolate
-            state logic where needed to avoid unnecessary re-renders and keep
-            components clean.
-          </p>
-        </div>
-
-        <div className="project-flex">
-          <img
-            src={ExamProfile}
-            alt="Profile UI example"
-            className="project-inline-img"
-          />
-          <p>
-            Beyond technical skills, this project helped reinforce a core
-            principle:
-            <strong> keep it simple.</strong> Simplicity improves both the
-            development process and the user experience. This mindset helped me
-            clean up design inconsistencies and better manage component logic.
-          </p>
-        </div>
-      </section>
-
-      <section className="project-section">
-        <h2>Challenges Faced</h2>
-        <p>
-          The design process was the hardest part. I started with too much
-          complexity, and it quickly became hard to manage. Once I stripped it
-          down and focused on clarity and core features, everything aligned much
-          better. From layout flow to data handling, simplifying helped a lot.
-        </p>
-      </section>
-
-      <section className="project-section">
-        <h2>Live Demo & Code</h2>
-        <p>
+        <div className="project-links">
           <a
             href="https://holidaze-exam-erlhal.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Live Demo
-          </a>{" "}
-          |{" "}
+            🔗 Live Demo
+          </a>
           <a
             href="https://github.com/ErlandHeenHalvorsen/Holidaze-eheen-exam"
             target="_blank"
             rel="noopener noreferrer"
+            className="project-icon-link"
           >
-            <VscGithubInverted size={38} />
+            <VscGithubInverted />
+            GitHub
           </a>
+        </div>
+
+        <p className="project-description">
+          For my final exam, I built an AirBnb-inspired booking platform using
+          Noroff's public API. The application includes user authentication,
+          venue listings, bookings, profiles, and venue management—all in a
+          clean, responsive UI built with React, Vite, and Tailwind.
+        </p>
+      </div>
+
+      {/* Technologies */}
+      <section className="project-section">
+        <h2>Technologies Used</h2>
+        <ul className="tech-icon-list">
+          <li>
+            <FaReact size={24} />
+            <span className="tech-text">React</span>
+          </li>
+          <li>
+            <SiVite size={24} />
+            <span className="tech-text">Vite</span>
+          </li>
+          <li>
+            <SiTailwindcss size={24} />
+            <span className="tech-text">Tailwind</span>
+          </li>
+          <li>
+            <FaJsSquare size={24} />
+            <span className="tech-text">JavaScript</span>
+          </li>
+          <li>
+            <FaFigma size={24} />
+            <span className="tech-text">Figma</span>
+          </li>
+        </ul>
+      </section>
+
+      {/* What I Learned */}
+      <section className="project-section">
+        <h2>What I Learned</h2>
+
+        <div className="project-flex">
+          <img src={ExamModal} alt="Modal UI" className="project-inline-img" />
+          <div>
+            <h3 className="project-subheading">Managing Scope & State</h3>
+            <p>
+              A key lesson was managing project scope. I initially
+              overengineered features, which slowed me down. Restarting with a
+              simpler plan helped me build reusable components with clarity and
+              purpose.
+            </p>
+            <p>
+              I also deepened my use of <strong>React state</strong> with{" "}
+              <code>useState</code> for forms, modals, loading indicators, and
+              error messages. Highlights include:
+            </p>
+            <ul>
+              <li>Controlling form inputs with local state.</li>
+              <li>Toggling modals using boolean state.</li>
+              <li>Tracking async feedback (loading, error, success).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="project-flex">
+          <img
+            src={ExamProfile}
+            alt="Profile UI"
+            className="project-inline-img"
+          />
+          <div>
+            <h3 className="project-subheading">Design Simplicity</h3>
+            <p>
+              Beyond code, I learned the value of simplicity. Starting with too
+              much complexity caused friction. Refocusing on clean UI and
+              minimal logic made everything more manageable and user-friendly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Reflection */}
+      <section className="project-section">
+        <h2>Reflection</h2>
+        <p>
+          The hardest part was the design process. Overcomplication early on
+          created confusion. Once I simplified layout, data flow, and component
+          structure, the project became easier to finish and much cleaner
+          overall.
         </p>
       </section>
-    </div>
+    </main>
   );
 }
 

@@ -1,12 +1,20 @@
-/* Home.css */
-
 .home {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 2rem;
   font-family: system-ui, sans-serif;
+  color: #222;
 }
 
+/* Page title */
+.home-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+/* About section */
 .about {
   display: flex;
   flex-wrap: wrap;
@@ -16,11 +24,11 @@
 }
 
 .about-img {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .about-text {
@@ -29,37 +37,53 @@
 }
 
 .about-text h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
 }
 
 .about-text p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.7;
   color: #444;
 }
+
+/* Stack section */
+.stack-wrapper {
+  margin: 3rem 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
 .stack-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
   list-style: none;
   padding: 0;
-  margin-top: 1rem;
 }
 
 .stack-list li {
+  background: #f0f0f0;
+  border-radius: 12px;
+  padding: 0.75rem;
+  transition: background 0.3s ease, opacity 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0.85;
 }
 
-.home-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
+.stack-list svg {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(20%);
 }
 
+/* Project cards */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -73,14 +97,14 @@
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(1, 4, 1, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
 .card-img {
@@ -97,10 +121,28 @@
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  text-align: left;
 }
 
 .card-desc {
   font-size: 1rem;
   color: #555;
-  line-height: 1.4;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img {
+    margin-bottom: 1rem;
+  }
+
+  .home-title {
+    text-align: center;
+  }
 }

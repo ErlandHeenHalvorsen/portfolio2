@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import "./Project.css";
+
 import JsThumb from "../assets/JsThumb.png";
 import JsCart from "../assets/JsCart.png";
 import JsHook from "../assets/JsHook.png";
-
 import JsResponsiveNav from "../assets/JsResponsiveNav.png";
 import JsRouter from "../assets/JsRouter.png";
 
@@ -11,130 +11,143 @@ import { FaReact, FaJsSquare } from "react-icons/fa";
 import { SiVite } from "react-icons/si";
 import { VscGithubInverted } from "react-icons/vsc";
 
+const techStack = [
+  { icon: <FaReact size={24} />, name: "React" },
+  { icon: <SiVite size={24} />, name: "Vite" },
+  { icon: <FaJsSquare size={24} />, name: "JavaScript" },
+];
 
-function JsFrameworks() {
+const learnings = [
+  {
+    img: JsRouter,
+    alt: "React Router",
+    title: "Routing & Layouts",
+    content: (
+      <>
+        React Router enabled clean separation between pages and reusable
+        layouts. I implemented dynamic routes, parameters, and the{" "}
+        <code>Outlet</code> component for shared layout structure.
+      </>
+    ),
+  },
+  {
+    img: JsHook,
+    alt: "Custom Hook",
+    title: "Reusable API Hook",
+    content: (
+      <>
+        I built a <code>useAPI</code> hook to handle asynchronous fetch calls,
+        centralizing <code>loading</code> and <code>error</code> state logic
+        across the app.
+      </>
+    ),
+  },
+  {
+    img: JsCart,
+    alt: "Global State",
+    title: "Global State & Filtering",
+    content: (
+      <>
+        Zustand gave me lightweight, global state management. I combined this
+        with filtering logic and debounced search to optimize product listing
+        performance.
+      </>
+    ),
+  },
+  {
+    img: JsResponsiveNav,
+    alt: "Responsive Nav",
+    title: "Responsive Navigation",
+    content: (
+      <>
+        Using local state and <code>lucide-react</code> icons, I built a clean
+        hamburger menu that works seamlessly across all screen sizes.
+      </>
+    ),
+  },
+];
+
+export default function JsFrameworks() {
   return (
-    <div className="project-page">
+    <main className="project-page">
+      {/* Hero image */}
       <div className="project-hero">
         <img
           src={JsThumb}
-          alt="JS Frameworks assignment thumbnail"
+          alt="Project thumbnail"
           className="project-hero-img"
         />
-        <h1 className="project-hero-title">JS Frameworks Assignment</h1>
       </div>
 
-      <p className="project-description">
-        In this assignment, I built a multi-page online store using React,
-        Vite, React Router, a custom data-fetching hook, and Zustand for state
-        management. Core features include product listing, search filtering,
-        shopping cart, and checkout flow, all with client-side routing and
-        global state.
-      </p>
+      {/* Title, links, and description */}
+      <div className="project-intro">
+        <h1 className="project-title">JS Frameworks Assignment</h1>
 
-      <section className="project-section">
-        <h2>Technologies Used</h2>
-        <ul className="tech-icon-list">
-          <li><FaReact title="React" size={38} color="#61dafb" /></li>
-          <li><SiVite title="Vite" size={38} color="#646cff" /></li>
-          <li><FaJsSquare title="JavaScript" size={38} color="#f7df1e" /></li>
-          <li className="tech-text">React Router</li>
-          <li className="tech-text">Zustand</li>
-        </ul>
-      </section>
-
-      <section className="project-section">
-        <h2>What I Learned</h2>
-
-        <div className="project-flex">
-          <img
-            src={JsRouter}
-            alt="React Router setup snippet"
-            className="project-inline-img"
-          />
-          <p>
-            Implementing React Router allowed me to structure the app into
-            separate pages and nested layouts. I learned to use <code>Routes</code>,
-            dynamic <code>Route</code> parameters for product details, and
-            <code>Outlet</code> for shared layouts.
-          </p>
-        </div>
-
-        <div className="project-flex">
-          <img
-            src={JsHook}
-            alt="useAPI custom hook"
-            className="project-inline-img"
-          />
-          <p>
-            Building a <code>useAPI</code> custom hook deepened my understanding
-            of <strong>hooks</strong>, async data fetching, and managing <code>loading</code>
-            and <code>error</code> states centrally.
-          </p>
-        </div>
-
-        <div className="project-flex">
-          <img
-            src={JsCart}
-            alt="FetchStore component example"
-            className="project-inline-img"
-          />
-          <p>
-            The <code>FetchStore</code> component taught me how to combine
-            filtering logic with React state and Zustand for global product and
-            cart management. I also practiced debouncing and efficient list
-            rendering.
-          </p>
-        </div>
-
-        <div className="project-flex">
-          <img
-            src={JsResponsiveNav}
-            alt="Responsive navigation snippet"
-            className="project-inline-img"
-          />
-          <p>
-            I created a responsive navigation with a hamburger menu using local
-            React state and the <code>lucide-react</code> icon library,
-            ensuring accessibility and mobile-friendly design.
-          </p>
-        </div>
-      </section>
-
-      <section className="project-section">
-        <h2>Challenges Faced</h2>
-        <p>
-          Managing global state with Zustand and syncing it with component-level
-          filtering took some iteration. I also debugged an issue with the
-          <code>catch</code> block in <code>useAPI</code> that wasn’t correctly
-          handling errors due to arrow function syntax. Ensuring responsive
-          design across breakpoints was another focus.
-        </p>
-      </section>
-
-      <section className="project-section">
-        <h2>Live Demo & Code</h2>
-        <p>
+        <div className="project-links">
           <a
             href="https://tee-shop-erlhal.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Live Demo
-          </a>{" "}|
-          {" "}
+          </a>
           <a
             href="https://github.com/ErlandHeenHalvorsen/ca-js-frameworks-erlhal"
             target="_blank"
             rel="noopener noreferrer"
+            className="project-icon-link"
           >
-            <VscGithubInverted size={38} />
+            <VscGithubInverted />
+            GitHub
           </a>
+        </div>
+
+        <p className="project-description">
+          This project involved building a multi-page React storefront with
+          shopping cart, search filtering, and routing. It used modern tools
+          like Vite, Zustand, and React Router for performance and clean
+          architecture.
         </p>
+      </div>
+
+      {/* Technologies */}
+      <section className="project-section">
+        <h2>Technologies Used</h2>
+        <ul className="tech-icon-list">
+          {techStack.map((tech, index) => (
+            <li key={index}>
+              {tech.icon}
+              {tech.name && <span className="tech-text">{tech.name}</span>}
+            </li>
+          ))}
+        </ul>
       </section>
 
-    </div>
+      {/* Learnings */}
+      <section className="project-section">
+        <h2>What I Learned</h2>
+        {learnings.map(({ img, alt, title, content }, i) => (
+          <div className="project-flex" key={i}>
+            <img src={img} alt={alt} className="project-inline-img" />
+            <div>
+              <h3 className="project-subheading">{title}</h3>
+              <p>{content}</p>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      {/* Reflection */}
+      <section className="project-section">
+        <h2>Reflection </h2>
+        <p>
+          Zustand required a careful balance between simplicity and reactivity.
+          Debugging a <code>useAPI</code> catch block showed me how subtle
+          syntax issues (like arrow function scoping) can silently break error
+          handling. Ensuring mobile responsiveness across views was also a key
+          lesson.
+        </p>
+      </section>
+    </main>
   );
 }
-
-export default JsFrameworks;

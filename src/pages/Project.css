@@ -1,154 +1,173 @@
-/* Project.css */
-
 .project-page {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 1.5rem;
   font-family: system-ui, sans-serif;
-  color: hsl(0, 0%, 10%);
+  color: #1a1a1a;
 }
+
 .project-hero {
   position: relative;
-  height: 280px;
-  border-radius: 12px;
+  height: 320px;
+  border-radius: 16px;
   overflow: hidden;
-  margin-bottom: 2rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.5rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 }
 
 .project-hero-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.8);
-}
-
-.project-hero-title {
-  position: absolute;
-  top: 12.5rem;
-  left: 2rem;
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #fff;
-  background: rgba(0.1, 0.1, 0.1, 0.3);
-  border-radius: 12px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  filter: brightness(0.75);
 }
 
 .project-title {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  text-align: center;
+  margin-bottom: 1.25rem;
+  text-align: left;
+  color: #222;
 }
 
-.project-img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-.project-description {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-}
-
-.project-section {
+.project-intro {
+  text-align: left;
   margin-bottom: 2.5rem;
 }
 
+.project-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.project-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-links a:hover {
+  color: #2563eb;
+}
+
+.project-section {
+  margin-bottom: 3rem;
+}
+
 .project-section h2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 1rem;
-  color: #333;
+  margin-bottom: 1.25rem;
+  color: #111;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+.project-subheading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222;
 }
 
 .project-section p {
-  line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
   margin-bottom: 1rem;
+  color: #333;
+  text-align: left;
 }
 
-.project-section ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.project-section li {
-  margin-bottom: 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* Flex layout for image + text pairs */
-.project-flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  align-items: flex-start;
-}
-
-.project-inline-img {
-  flex-shrink: 0;
-  width: 300px;
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-.project-inline-images {
-  display: flex;
-
-  gap: 1rem;
-}
 .tech-icon-list {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   list-style: none;
   padding: 0;
-  margin: 1rem 0;
+  margin: 1rem 0 2rem;
+  justify-content: flex-start;
 }
 
 .tech-icon-list li {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  list-style: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  gap: 0.5rem;
 }
 
 .tech-text {
   font-size: 1rem;
   font-weight: 500;
-  color: #333;
+  color: #444;
 }
 
-/* Responsive: stack on small screens */
+.project-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.project-inline-img {
+  width: 240px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.project-inline-images {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 768px) {
   .project-flex {
     flex-direction: column;
     align-items: center;
+    text-align: left;
   }
 
   .project-inline-img {
     width: 100%;
     max-width: 100%;
   }
-}
 
-/* Links to GitHub / Demo */
-.project-section a {
-  color: #2563eb; /* Tailwind's blue-600 */
-  font-weight: 500;
-  text-decoration: underline;
-  transition: color 0.2s ease;
-}
+  .project-title,
+  .project-intro,
+  .project-section h2,
+  .project-section p,
+  .project-links {
+    text-align: center;
+    justify-content: center;
+  }
 
-.project-section a:hover {
-  color: #1d4ed8; /* Tailwind's blue-700 */
+  .tech-icon-list {
+    justify-content: center;
+  }
 }

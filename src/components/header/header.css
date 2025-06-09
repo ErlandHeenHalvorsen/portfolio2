@@ -1,10 +1,8 @@
-/* src/components/header/header.css */
-
 .site-header {
   background: hsl(0, 0%, 98%);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   margin-bottom: 2rem;
 }
 
@@ -16,10 +14,10 @@
 
 .site-title-link {
   text-decoration: none;
-  color: hsl(0, 0%, 10%);
+  color: hsl(218, 51%, 40%);
   transition: color 0.2s ease;
 }
 
 .site-title-link:hover {
-  color: hsl(220, 60%, 50%);
+  color: hsl(218, 51%, 17%);
 }
