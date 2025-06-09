@@ -2,7 +2,7 @@
 import { Link } from "react-router";
 import React from "react";
 import "./home.css";
-import ProfilePicture from "../assets/ProfilePicture.jpg";
+import ProfilePicture2 from "../assets/ProfilePicture2.jpg";
 import ExamThumb from "../assets/ExamThumb.png";
 import JsThumb from "../assets/JsThumb.png";
 import SemesterThumb from "../assets/SemesterThumb.png";
@@ -46,7 +46,7 @@ function Home() {
     <div className="home">
       {/* About Me Section */}
       <section className="about">
-        <img src={ProfilePicture} alt="Erland" className="about-img" />
+        <img src={ProfilePicture2} alt="Erland" className="about-img" />
         <div className="about-text">
           <h1>Hi, I'm Erland</h1>
           <p>
