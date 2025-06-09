@@ -1,7 +1,7 @@
 // Home.jsx
 import { Link } from "react-router";
 import React from "react";
-import "./Home.css";
+import "./home.css";
 import ProfilePicture from "../assets/ProfilePicture.jpg";
 import ExamThumb from "../assets/ExamThumb.png";
 import JsThumb from "../assets/JsThumb.png";
