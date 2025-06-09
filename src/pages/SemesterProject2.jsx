@@ -1,4 +1,5 @@
 import "./Project.css";
+import ReturnButton from "../components/button/Button";
 import React from "react";
 import SemesterThumb from "../assets/SemesterThumb.png";
 import { SiVite } from "react-icons/si";
@@ -22,7 +23,7 @@ function SemesterProject2() {
           className="project-hero-img"
         />
       </div>
-
+      <ReturnButton />
       {/* Title & Intro */}
       <div className="project-intro">
         <h1 className="project-title">BidNest – Semester Project 2</h1>

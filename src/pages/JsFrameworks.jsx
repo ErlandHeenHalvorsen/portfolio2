@@ -1,5 +1,6 @@
 import React from "react";
 import "./Project.css";
+import ReturnButton from "../components/button/Button";
 
 import JsThumb from "../assets/JsThumb.png";
 import JsCart from "../assets/JsCart.png";
@@ -78,6 +79,7 @@ export default function JsFrameworks() {
           className="project-hero-img"
         />
       </div>
+      <ReturnButton />
 
       {/* Title, links, and description */}
       <div className="project-intro">

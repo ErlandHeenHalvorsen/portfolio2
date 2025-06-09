@@ -1,4 +1,5 @@
 import "./Project.css";
+import ReturnButton from "../components/button/Button";
 import React from "react";
 import ExamThumb from "../assets/ExamThumb.png";
 import ExamModal from "../assets/ExamModal.png";
@@ -18,6 +19,7 @@ function ProjectExam2() {
           className="project-hero-img"
         />
       </div>
+      <ReturnButton />
 
       {/* Title, links, description */}
       <div className="project-intro">
