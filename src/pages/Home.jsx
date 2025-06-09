@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { VscGithubInverted } from "react-icons/vsc";
+import { SiVite } from "react-icons/si";
 
 const projects = [
   {
@@ -28,13 +29,15 @@ const projects = [
     path: "/ProjectExam2",
     title: "Project Exam 2",
     thumbnail: ExamThumb,
-    description: "Final exam project showcasing full-stack skills.",
+    description:
+      "Final exam project showcasing Api usage, React Routing and overall web-dev technologies.",
   },
   {
     path: "/SemesterProject2",
     title: "Semester Project 2",
     thumbnail: SemesterThumb,
-    description: "A semester-long development journey.",
+    description:
+      "A comprehensive semester project focusing on modern web development practices.",
   },
 ];
 
@@ -66,6 +69,9 @@ function Home() {
               </li>
               <li>
                 <FaReact title="React" color="#61dafb" size={40} />
+              </li>
+              <li>
+                <SiVite title="Vite" color="#646cff" size={40} />
               </li>
               <li>
                 <FaNodeJs title="Node.js" color="#68a063" size={40} />
