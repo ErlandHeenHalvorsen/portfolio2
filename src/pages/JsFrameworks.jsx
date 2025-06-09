@@ -3,12 +3,13 @@ import "./Project.css";
 import JsThumb from "../assets/JsThumb.png";
 import JsCart from "../assets/JsCart.png";
 import JsHook from "../assets/JsHook.png";
-import JsNav from "../assets/JsNav.png";
+
 import JsResponsiveNav from "../assets/JsResponsiveNav.png";
 import JsRouter from "../assets/JsRouter.png";
 
 import { FaReact, FaJsSquare } from "react-icons/fa";
 import { SiVite } from "react-icons/si";
+import { VscGithubInverted } from "react-icons/vsc";
 
 
 function JsFrameworks() {
@@ -115,7 +116,7 @@ function JsFrameworks() {
         <h2>Live Demo & Code</h2>
         <p>
           <a
-            href="https://yourdemo.link"
+            href="https://tee-shop-erlhal.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -123,11 +124,11 @@ function JsFrameworks() {
           </a>{" "}|
           {" "}
           <a
-            href="https://github.com/yourrepo"
+            href="https://github.com/ErlandHeenHalvorsen/ca-js-frameworks-erlhal"
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub Repo
+            <VscGithubInverted size={38} />
           </a>
         </p>
       </section>

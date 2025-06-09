@@ -123,7 +123,7 @@ function ProjectExam2() {
         <h2>Live Demo & Code</h2>
         <p>
           <a
-            href="https://yourdemo.link"
+            href="https://holidaze-exam-erlhal.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -131,11 +131,11 @@ function ProjectExam2() {
           </a>{" "}
           |{" "}
           <a
-            href="https://github.com/yourrepo"
+            href="https://github.com/ErlandHeenHalvorsen/Holidaze-eheen-exam"
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub Repo
+            <VscGithubInverted size={38} />
           </a>
         </p>
       </section>
