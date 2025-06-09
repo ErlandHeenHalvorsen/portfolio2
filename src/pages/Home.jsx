@@ -52,7 +52,7 @@ function Home() {
           <p>
             I'm a web development student from Bergen, passionate about creating
             modern, responsive websites and learning new tech. I also enjoy
-            gaming, working out, and exploring nature. This portfolio showcases
+            music, working out, and exploring nature. This portfolio showcases
             some of my recent school projects.
           </p>
           <div>
